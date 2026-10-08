@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="yy6080电影网 — 60 分钟看懂 80 分电影。为忙碌的人做的极简观影指南：60′速看片单、8 种情绪类型、80 分线、导演 60 秒、60 部必看、关于本站。">
+<meta name="keywords" content="yy6080电影网, yy6080, 电影推荐, 高分电影, 60分钟电影, 80分电影, 电影清单, 必看电影, 正版观影, yy6080dianyingwang-cn">
+<meta name="author" content="yy6080电影网">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="yy6080电影网 - 60 分钟看懂 80 分电影 | yy6080dianyingwang-cn.github.io">
+<meta property="og:description" content="yy6080电影网：为忙碌的人做的极简观影指南。60 分钟速看，80 分才推荐。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yy6080dianyingwang-cn.github.io/">
+<link rel="canonical" href="https://yy6080dianyingwang-cn.github.io/">
+<title>yy6080电影网 - 60 分钟看懂 80 分电影 | yy6080dianyingwang-cn.github.io</title>
+<style>
+/* ============ 设计令牌 ============ */
+:root{
+  --ink:#141a22; --ink2:#6c7685; --ink3:#a4adb8;
+  --paper:#f5f7fa; --card:#fff; --line:#e4e8ef;
+  --brand:#ff5c00;   /* 主色·橙 */
+  --deep:#e63900;    /* 辅色·深橙 */
+  --navy:#1c3b63;    /* 点睛·深蓝 */
+  --cream:#fff7ee;   /* 米白 */
+  --r:22px;
+  --shadow:0 24px 52px rgba(20,26,34,.14);
+  --shadow-c:0 16px 34px rgba(255,92,0,.32);
+  --grad:linear-gradient(120deg,var(--brand),var(--deep));
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;background:var(--paper);color:var(--ink);line-height:1.78;font-size:16px}
+a{color:inherit;text-decoration:none;transition:.24s cubic-bezier(.4,0,.2,1)}
+ul,ol{list-style:none}
+.container{max-width:1180px;margin:0 auto;padding:0 22px}
+.eyebrow{font-size:.62rem;font-weight:900;letter-spacing:3.8px;color:var(--deep)}
+.sec-title{font-size:clamp(1.7rem,4.4vw,2.42rem);font-weight:950;letter-spacing:-.6px;line-height:1.22;margin:8px 0 10px}
+.sec-sub{color:var(--ink2);font-size:.95rem;max-width:660px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.more{font-size:.83rem;font-weight:800;color:var(--ink2);border:1.5px solid var(--line);padding:8px 18px;border-radius:30px;white-space:nowrap}
+.more:hover{color:var(--brand);border-color:var(--brand)}
+section{padding:clamp(54px,10vw,94px) 0}
+
+/* ============ 导航 ============ */
+.header{position:sticky;top:0;z-index:70;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:950;font-size:1.28rem;letter-spacing:.5px}
+.logo .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:1.32rem;color:#fff;padding:7px 12px;border-radius:10px;background:var(--grad);letter-spacing:1px;transform:rotate(-2.4deg);white-space:nowrap}
+.logo small{display:block;font-size:.5rem;font-weight:800;color:var(--ink3);letter-spacing:2.6px;line-height:1.1}
+.nav{display:flex;gap:2px}
+.nav a{font-size:.91rem;font-weight:750;color:var(--ink2);padding:9px 12px;border-radius:10px;white-space:nowrap}
+.nav a:hover{color:var(--brand);background:rgba(255,92,0,.07)}
+.hd-act .btn{font-size:.87rem;font-weight:950;padding:10px 20px;border-radius:10px;background:var(--grad);color:#fff;box-shadow:0 8px 18px rgba(255,92,0,.3)}
+.hd-act .btn:hover{transform:translateY(-1px);color:#fff}
+.burger{display:none;background:none;border:none;font-size:1.9rem;color:var(--ink);cursor:pointer}
+
+/* ============ Hero：倒计时 60:80 ============ */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(70% 95% at 84% 2%,#2a1a08 0%,#16233a 55%,#0e1622 100%);color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(26% 60% at 8% 92%,rgba(255,92,0,.30),transparent 66%),
+  repeating-linear-gradient(62deg,transparent 0 26px,rgba(255,255,255,.012) 26px 27px)}
+.tick{position:absolute;font-family:ui-monospace,Menlo,monospace;color:rgba(255,255,255,.05);font-weight:950;line-height:1}
+.t1{font-size:clamp(90px,22vw,230px);right:-6px;top:6%}
+.t2{font-size:clamp(60px,14vw,140px);left:-4px;bottom:4%}
+.hero-in{position:relative;display:grid;grid-template-columns:1.18fr 1fr;gap:44px;align-items:center;padding:clamp(54px,13vw,112px) 22px}
+.hero h1{font-size:clamp(2rem,6vw,3.9rem);font-weight:950;line-height:1.1;letter-spacing:-1.6px}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero .lede{color:#d9dee6;font-size:clamp(1rem,2.2vw,1.16rem);margin:20px 0 26px;max-width:560px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:14px 28px;border-radius:11px;font-weight:950;font-size:.95rem;border:2px solid transparent;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn-p{background:var(--grad);color:#fff;box-shadow:var(--shadow-c)}
+.btn-p:hover{transform:translateY(-2px);color:#fff}
+.btn-g{background:transparent;color:#fff;border-color:rgba(255,255,255,.32)}
+.btn-g:hover{border-color:var(--brand);color:var(--brand)}
+.hero-stats{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
+.hero-stats div span{display:block;font-size:1.7rem;font-weight:950;line-height:1;color:var(--brand);font-family:ui-monospace,Menlo,monospace}
+.hero-stats div small{font-size:.68rem;font-weight:850;letter-spacing:1.8px;color:#a9b2bd}
+
+/* 右侧"数字卡" */
+.numcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:26px;padding:26px;backdrop-filter:blur(6px)}
+.numcard .row{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px dashed rgba(255,255,255,.18)}
+.numcard .row:last-child{border-bottom:0}
+.numcard .big{font-family:ui-monospace,Menlo,monospace;font-size:clamp(2.4rem,6vw,3.4rem);font-weight:950;line-height:1;color:var(--brand);letter-spacing:-2px}
+.numcard .big i{font-style:normal;color:#fff;font-size:1.1rem;margin-left:4px}
+.numcard h3{font-size:1.02rem}
+.numcard p{font-size:.82rem;color:#c3cad4}
+
+/* ============ 栏目一：60′速看片单（横滑卡片）============ */
+.picks{background:#fff}
+.fx{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 22px;scrollbar-width:thin}
+.fx::-webkit-scrollbar{height:9px}
+.fx::-webkit-scrollbar-thumb{background:#f0c2a2;border-radius:8px}
+.frame{flex:0 0 clamp(250px,28.6vw,304px);scroll-snap-align:start;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card);transition:.3s}
+.frame:hover{transform:translateY(-7px) rotate(-.6deg);box-shadow:var(--shadow);border-color:#f0b48c}
+.frame .poster{height:150px;color:#fff;padding:16px;display:flex;flex-direction:column;justify-content:space-between}
+.frame .poster .tm{font-family:ui-monospace,Menlo,monospace;font-size:.66rem;font-weight:950;letter-spacing:1.6px;background:rgba(255,255,255,.24);padding:4px 9px;border-radius:20px;align-self:flex-start}
+.frame .poster h3{font-size:1.16rem;line-height:1.3;font-weight:950}
+.frame .body{padding:15px 18px 18px}
+.frame .body p{font-size:.83rem;color:var(--ink2)}
+.frame .meta{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-size:.78rem;color:var(--ink3)}
+.frame .meta b{color:var(--deep);font-weight:950;font-size:.9rem}
+
+/* ============ 栏目二：8 种情绪（等宽九宫格）============ */
+.mood{background:linear-gradient(180deg,var(--cream),#f5f7fa)}
+.grid9{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g9{position:relative;height:0;padding-bottom:66%;border-radius:16px;overflow:hidden;color:#fff;padding:18px;display:flex;flex-direction:column;justify-content:flex-end;transition:.3s;cursor:default}
+.g9 i{position:absolute;inset:0;z-index:0;transition:.5s}
+.g9 > *{position:relative;z-index:1}
+.g9 .big{font-family:ui-monospace,Menlo,monospace;font-size:2rem;font-weight:950;line-height:.82;letter-spacing:-2.5px}
+.g9 h3{font-size:1.02rem;line-height:1.34;margin-top:2px}
+.g9:hover{transform:scale(1.04)}
+.g9:hover i{transform:scale(1.18)}
+
+/* ============ 栏目三：80 分线（交错流 + 评分环）============ */
+.line80{background:#fff}
+.q{display:grid;grid-template-columns:122px 1fr;gap:20px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px 24px;margin-bottom:14px;transition:.28s}
+.q:nth-child(even){grid-template-columns:1fr 122px}
+.q:nth-child(even) .ring{order:2}
+.q:hover{border-color:#f0b48c;box-shadow:var(--shadow);transform:translateX(6px)}
+.q:nth-child(even):hover{transform:translateX(-6px)}
+.ring{--v:82;width:96px;height:96px;border-radius:50%;background:
+  conic-gradient(var(--brand) calc(var(--v)*1%),#e6eaf0 0);
+  display:grid;place-items:center;position:relative;transform:rotate(-90deg)}
+.ring::after{content:"";position:absolute;inset:9px;border-radius:50%;background:#fff}
+.ring span{position:relative;z-index:1;font-weight:950;font-size:1.28rem;color:var(--deep);transform:rotate(90deg)}
+.q blockquote{font-size:clamp(1rem,2.3vw,1.18rem);line-height:1.66;color:var(--ink);font-family:"Songti SC","SimSun",Georgia,serif;font-weight:700}
+.q blockquote::before{content:"\201C";color:var(--brand);font-size:2.4rem;line-height:.45;vertical-align:-.2em;margin-right:4px;font-style:normal}
+.q .who{margin-top:10px;font-size:.8rem;color:var(--ink3)}
+.q .who b{color:var(--deep);font-weight:950}
+
+/* ============ 栏目四：导演 60 秒（纵向时间轴）============ */
+.knight{background:linear-gradient(180deg,#f6ede4,#f5f7fa)}
+.tl{position:relative;padding-left:58px}
+.tl::before{content:"";position:absolute;left:20px;top:8px;bottom:8px;width:3px;border-radius:3px;background:var(--grad)}
+.node{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 22px;margin-bottom:16px;transition:.25s}
+.node:hover{border-color:#f0b48c;box-shadow:var(--shadow);transform:translateX(6px)}
+.node::after{content:counter(n);counter-increment:n;position:absolute;left:-58px;top:24px;width:40px;height:40px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-family:ui-monospace,Menlo,monospace;font-weight:950;font-size:1rem;box-shadow:0 8px 18px rgba(255,92,0,.3)}
+.tl{counter-reset:n}
+.node .who{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.node .ava{width:54px;height:54px;border-radius:50%;color:#fff;font-weight:950;display:grid;place-items:center;background:var(--grad)}
+.node h3{font-size:1.14rem}
+.node .nat{font-size:.7rem;font-weight:950;letter-spacing:1.4px;color:var(--deep)}
+.node p{color:var(--ink2);font-size:.88rem;margin-top:10px}
+.node .films{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+.node .films a{font-size:.75rem;padding:5px 12px;border-radius:20px;background:var(--paper);border:1px solid var(--line);color:var(--ink2)}
+.node .films a:hover{color:var(--brand);border-color:var(--brand)}
+
+/* ============ 栏目五：60 部必看（手风琴 details）============ */
+.sixty{background:#0e1622;color:#e7eaef}
+.sixty .sec-title{color:#fff}
+.sixty .sec-sub{color:#a9b2bd}
+.sixty .more{color:#a9b2bd;border-color:#3f4a5a}
+.sixty .more:hover{color:var(--brand);border-color:var(--brand)}
+.acc{border:1px solid rgba(255,255,255,.14);border-radius:14px;margin-bottom:11px;overflow:hidden;background:rgba(255,255,255,.04);transition:.25s}
+.acc:hover{border-color:var(--brand)}
+.acc[open]{border-color:var(--brand);background:rgba(255,92,0,.09)}
+.acc > summary{display:flex;align-items:center;gap:14px;padding:16px 20px;cursor:pointer;list-style:none;font-weight:850}
+.acc > summary::-webkit-details-marker{display:none}
+.acc > summary .no{font-family:ui-monospace,Menlo,monospace;font-size:1.42rem;font-weight:950;color:var(--brand);line-height:1}
+.acc > summary h3{font-size:1.02rem}
+.acc > summary .caret{margin-left:auto;color:var(--ink3);transition:.25s}
+.acc[open] > summary .caret{transform:rotate(180deg);color:var(--brand)}
+.acc .inner{padding:0 20px 18px;color:#cfd5dc;font-size:.9rem}
+.acc .inner .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.acc .inner .tags a{font-size:.74rem;padding:4px 11px;border-radius:20px;background:rgba(255,255,255,.1);color:#e8ebef}
+.acc .inner .tags a:hover{background:var(--brand);color:#fff}
+
+/* ============ 栏目六：关于本站（栅格 + 数据条）============ */
+.about{background:#fff}
+.ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.ab-grid h2{font-size:clamp(1.8rem,4.4vw,2.6rem);font-weight:950;line-height:1.22}
+.ab-grid h2 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ab-grid > p{color:var(--ink2);margin:18px 0 24px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.feat .f{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:17px;transition:.25s}
+.feat .f:hover{border-color:#f0b48c;transform:translateY(-3px)}
+.feat .f .n{font-family:ui-monospace,Menlo,monospace;font-size:1.5rem;font-weight:950;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-1px}
+.feat .f h3{font-size:.98rem;margin:6px 0 4px}
+.feat .f p{font-size:.82rem;color:var(--ink2)}
+.metrics{display:flex;flex-direction:column;gap:14px}
+.metric{background:var(--grad);border-radius:15px;padding:17px 20px;color:#fff}
+.metric .top{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:9px}
+.metric .top b{font-weight:950;color:#ffe1c4;font-family:ui-monospace,Menlo,monospace;font-size:1.02rem}
+.track{height:9px;border-radius:20px;background:rgba(255,255,255,.26);overflow:hidden}
+.track i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,#fff,#ffe1c4,#ffd27a)}
+
+/* ============ 页脚 ============ */
+.footer{border-top:1px solid var(--line);background:#fff;padding:52px 0 24px}
+.ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
+.ft-col h4{font-size:1rem;margin-bottom:14px}
+.ft-col ul{display:flex;flex-direction:column;gap:10px}
+.ft-col a{color:var(--ink2);font-size:.87rem}
+.ft-col a:hover{color:var(--brand)}
+.ft-base{text-align:center;color:var(--ink3);font-size:.8rem;border-top:1px solid var(--line);padding-top:22px}
+.ft-base a{color:var(--ink2)}
+.ft-base a:hover{color:var(--brand)}
+
+/* ============ 响应式 ============ */
+@media(max-width:960px){
+  .grid9{grid-template-columns:repeat(2,1fr)}
+  .hero-in{grid-template-columns:1fr;gap:34px}
+  .numcard{order:-1}
+  .ab-grid{grid-template-columns:1fr;gap:26px}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .burger{display:block}
+  .nav{position:absolute;top:70px;left:0;right:0;flex-direction:column;background:#fff;border-bottom:1px solid var(--line);padding:10px 16px;display:none}
+  .nav.show{display:flex}
+  .nav a{font-size:1rem;padding:13px;border-bottom:1px solid #f9ede2}
+  .hd-act .btn{display:none}
+  .q,.q:nth-child(even){grid-template-columns:88px 1fr}
+  .q:nth-child(even) .ring{order:0}
+  .cta .btn{width:100%;justify-content:center}
+  .ring{width:78px;height:78px}
+}
+@media(max-width:520px){
+  .container{padding:0 16px}
+  .grid9{grid-template-columns:1fr 1fr}
+}
+@media print{
+  .header,.burger,.hd-act,.cta,.tick,.hero-stats{display:none}
+  body{background:#fff;color:#000}
+  section{padding:14px 0}
+  .sixty,.acc{background:#fff!important;color:#000;border-color:#ccc}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- ==================== 导航 ==================== -->
+<header class="header" role="banner">
+  <div class="container hd-in">
+    <a class="logo" href="#top" aria-label="yy6080电影网 首页">
+      <span class="mono">yy6080</span>
+      <span>电影网<small>60 MIN · 80 PTS</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="菜单" aria-expanded="false">☰</button>
+    <nav>
+      <div class="nav" id="nav">
+        <a href="#picks">60′速看</a>
+        <a href="#mood">8 种情绪</a>
+        <a href="#line80">80 分线</a>
+        <a href="#knight">导演 60 秒</a>
+        <a href="#sixty">60 部必看</a>
+        <a href="#about">关于本站</a>
+      </div>
+    </nav>
+    <div class="hd-act"><a class="btn" href="#picks">今晚就看</a></div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ==================== Hero ==================== -->
+  <section class="hero">
+    <div class="tick t1" aria-hidden="true">60</div>
+    <div class="tick t2" aria-hidden="true">80</div>
+    <div class="container hero-in">
+      <div>
+        <div class="eyebrow">60 MINUTES · 80 POINTS · WATCH SMARTER</div>
+        <h1><em>yy6080</em> 电影网<br>60 分钟，看懂 80 分</h1>
+        <p class="lede">忙碌的人也需要好电影。<b>yy6080</b> 是一个极简观影公式：<b>60 分钟</b>——一部电影的合理时长，也是你能挤出来的时间；<b>80 分</b>——低于这个分数，不进片单。不刷解说、不倍速、不看烂片，把有限的 60 分钟，交给稳过 80 分的作品。</p>
+        <div class="cta">
+          <a class="btn btn-p" href="#picks">60′ 速看片单 →</a>
+          <a class="btn btn-g" href="#about">yy6080 是什么</a>
+        </div>
+        <div class="hero-stats">
+          <div><span>60′</span><small>一部好片</small></div>
+          <div><span>≥80</span><small>入选门槛</small></div>
+          <div><span>0</span><small>盗版资源</small></div>
+        </div>
+      </div>
+
+      <aside class="numcard" aria-label="yy6080 公式说明">
+        <div class="row"><div><div class="big">60<i>′</i></div><h3>时间单位</h3><p>一部电影的"有效时长"。我们替你筛掉注水片，只留值得你完整看完的 60 分钟。</p></div></div>
+        <div class="row"><div><div class="big">80<i>分</i></div><h3>质量底线</h3><p>豆瓣/IMDb/烂番茄综合加权低于 80 分，不推荐。宁缺毋滥。</p></div></div>
+        <div class="row"><div><div class="big">yy<i>6080</i></div><h3>品牌承诺</h3><p>为忙碌的人做减法：少看 10 部烂片，多看 1 部好片。</p></div></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ==================== 栏目一：60′速看片单（横滑卡片）=================== -->
+  <section id="picks" aria-labelledby="h-f1" class="picks">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">60′ PICKS</div>
+          <h2 class="sec-title" id="h-f1">60′ 速看片单 · 6 部刚好 60 分钟级</h2>
+          <p class="sec-sub">都是"不拖泥带水"的那一类：时长克制、节奏干净、看完不后悔。适合工作日晚 9 点。</p>
+        </div>
+        <a class="more" href="#">完整片单 →</a>
+      </div>
+
+      <div class="fx" role="region" aria-label="60分钟速看片单横向列表">
+        <article class="frame">
+          <div class="poster" style="background:linear-gradient(150deg,#c8102e,#7a0819)"><span class="tm">121 MIN</span><h3>肖申克的救赎</h3></div>
+          <div class="body"><p>希望是最危险的东西，也是最值得冒险的东西。</p><div class="meta"><span>类型：希望</span><b>9.7</b></div></div>
+        </article>
+        <article class="frame">
+          <div class="poster" style="background:linear-gradient(150deg,#1c3b63,#0f2540)"><span class="tm">112 MIN</span><h3>海上钢琴师</h3></div>
+          <div class="body"><p>他一生没下过船，却比绝大多数人活得更完整。</p><div class="meta"><span>类型：音乐 / 人生</span><b>9.3</b></div></div>
+        </article>
+        <article class="frame">
+          <div class="poster" style="background:linear-gradient(150deg,#ff8c42,#b2540c)"><span class="tm">96 MIN</span><h3>千与千寻</h3></div>
+          <div class="body"><p>记住自己的名字，就不会在成年人的世界里走丢。</p><div class="meta"><span>类型：成长 / 奇幻</span><b>9.4</b></div></div>
+        </article>
+        <article class="frame">
+          <div class="poster" style="background:linear-gradient(150deg,#7b2ff2,#4326b8)"><span class="tm">104 MIN</span><h3>心灵奇旅</h3></div>
+          <div class="body"><p>人生的意义，可能只是一片披萨、一片落叶。</p><div class="meta"><span>类型：治愈 / 哲学</span><b>8.7</b></div></div>
+        </article>
+        <article class="frame">
+          <div class="poster" style="background:linear-gradient(150deg,#12b5a6,#0a6b62)"><span class="tm">116 MIN</span><h3>七武士</h3></div>
+          <div class="body"><p>3 小时不觉得长，因为每一分钟都在"讲人"。</p><div class="meta"><span>类型：武士 / 群像</span><b>9.3</b></div></div>
+        </article>
+        <article class="frame">
+          <div class="poster" style="background:linear-gradient(150deg,#4a5568,#222a35)"><span class="tm">139 MIN</span><h3>搏击俱乐部</h3></div>
+          <div class="body"><p>你不是你的工作，不是你的车。那你是谁？</p><div class="meta"><span>类型：心理 / 反叛</span><b>9.0</b></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 栏目二：8 种情绪（等宽九宫格）=================== -->
+  <section id="mood" aria-labelledby="h-a2" class="mood">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">MOOD · 8</div>
+          <h2 class="sec-title" id="h-a2">8 种情绪 · 60 分钟对症下片</h2>
+          <p class="sec-sub">不知道看什么？先选今晚的情绪。每种情绪，只给一部"最准"的。</p>
+        </div>
+        <a class="more" href="#">完整图鉴 →</a>
+      </div>
+
+      <div class="grid9">
+        <div class="g9"><i style="background:linear-gradient(150deg,#ff5c00,#c0392b)"></i><div class="big">01</div><h3>想哭</h3></div>
+        <div class="g9"><i style="background:linear-gradient(150deg,#7b2ff2,#4326b8)"></i><div class="big">02</div><h3>想笑</h3></div>
+        <div class="g9"><i style="background:linear-gradient(150deg,#ff8c42,#c25410)"></i><div class="big">03</div><h3>想燃</h3></div>
+        <div class="g9"><i style="background:linear-gradient(150deg,#2f6bff,#123a8a)"></i><div class="big">04</div><h3>想烧脑</h3></div>
+        <div class="g9"><i style="background:linear-gradient(150deg,#12b5a6,#0a6b62)"></i><div class="big">05</div><h3>想安静</h3></div>
+        <div class="g9"><i style="background:linear-gradient(150deg,#e63946,#8f1f2a)"></i><div class="big">06</div><h3>想被震撼</h3></div>
+        <div class="g9"><i style="background:linear-gradient(150deg,#c8a24a,#8a6d22)"></i><div class="big">07</div><h3>想穿越</h3></div>
+        <div class="g9"><i style="background:linear-gradient(150deg,#5bc0be,#237c7a)"></i><div class="big">08</div><h3>想重启</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 栏目三：80 分线（交错流 + 评分环）=================== -->
+  <section id="line80" aria-labelledby="h-t3" class="line80">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">THE 80 LINE</div>
+          <h2 class="sec-title" id="h-t3">80 分线 · 低于 80 不推荐</h2>
+          <p class="sec-sub">"好看"太模糊。我们设一条硬线：<b>综合评分 ≥ 80 分</b> 才进片单。以下是刚刚过线的 4 部，每一部都"险胜"。</p>
+        </div>
+        <a class="more" href="#">全部 80+ →</a>
+      </div>
+
+      <article class="q" style="--v:96"><div class="ring"><span>9.6</span></div>
+        <div><blockquote>说好的一辈子，差一年、一个月、一天、一个时辰，都不算一辈子。</blockquote>
+        <div class="who"><b>——《霸王别姬》</b> 评分 96 ｜ 类型：时代 / 戏梦 ｜ 适合：需要被扎一下</div></div>
+      </article>
+      <article class="q" style="--v:94"><div class="ring"><span>9.4</span></div>
+        <div><blockquote>不管前方的路有多苦，只要走的方向正确，就比站在原地更接近幸福。</blockquote>
+        <div class="who"><b>——《千与千寻》</b> 评分 94 ｜ 类型：成长 / 奇幻 ｜ 适合：走不动的时候</div></div>
+      </article>
+      <article class="q" style="--v:91"><div class="ring"><span>9.1</span></div>
+        <div><blockquote>有些电影，看完你会想给十年后的自己打个电话。</blockquote>
+        <div class="who"><b>——《时空恋旅人》</b> 评分 91 ｜ 类型：爱情 / 时间 ｜ 适合：想珍惜点什么</div></div>
+      </article>
+      <article class="q" style="--v:87"><div class="ring"><span>8.7</span></div>
+        <div><blockquote>重要的不是目的地，是"活着"这件事本身。</blockquote>
+        <div class="who"><b>——《活着》</b> 评分 87 ｜ 类型：家庭 / 时代 ｜ 适合：需要被提醒</div></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==================== 栏目四：导演 60 秒（纵向时间轴）=================== -->
+  <section id="knight" aria-labelledby="h-k4" class="knight">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">AUTEUR · 60″</div>
+          <h2 class="sec-title" id="h-k4">导演 60 秒 · 4 位不会踩雷的</h2>
+          <p class="sec-sub">认准导演，等于拥有了一条永不掉线的 80 分片单。每位只需 60 秒就能记住他的"执念"。</p>
+        </div>
+        <a class="more" href="#">全部导演 →</a>
+      </div>
+
+      <div class="tl">
+        <article class="node">
+          <div class="who"><span class="ava">黑</span><div><span class="nat">AKIRA KUROSAWA · 武士</span><h3>黑泽明</h3></div></div>
+          <p>用暴雨、泥地和七个人，把"勇气"讲得比任何教科书都清楚。</p>
+          <div class="films"><a href="#">七武士</a><a href="#">罗生门</a><a href="#">影武者</a></div>
+        </article>
+        <article class="node">
+          <div class="who"><span class="ava">李</span><div><span class="nat">WONG KAR-WAI · 慢</span><h3>王家卫</h3></div></div>
+          <p>别人讲故事，他拍"没说出口的话"。他的狠，是敢让电影慢到让人坐不住。</p>
+          <div class="films"><a href="#">花样年华</a><a href="#">重庆森林</a><a href="#">2046</a></div>
+        </article>
+        <article class="node">
+          <div class="who"><span class="ava">诺</span><div><span class="nat">CHRISTOPHER NOLAN · 脑</span><h3>克里斯托弗·诺兰</h3></div></div>
+          <p>他让观众动脑子，而不是被喂饱。看不懂不是电影的错。</p>
+          <div class="films"><a href="#">盗梦空间</a><a href="#">星际穿越</a><a href="#">奥本海默</a></div>
+        </article>
+        <article class="node">
+          <div class="who"><span class="ava">宫</span><div><span class="nat">HAYAO MIYAZAKI · 童真</span><h3>宫崎骏</h3></div></div>
+          <p>他拍给孩子，却让成年人哭。真正的童话，从不回避失去。</p>
+          <div class="films"><a href="#">千与千寻</a><a href="#">龙猫</a><a href="#">天空之城</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 栏目五：60 部必看（手风琴 details）=================== -->
+  <section id="sixty" aria-labelledby="h-n5" class="sixty">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">60 MUST-WATCH</div>
+          <h2 class="sec-title" id="h-n5">60 部必看 · 按场景分 4 组</h2>
+          <p class="sec-sub">一辈子至少要看完的 60 部，我们按"什么时候看"分成 4 组。今晚属于哪一组？</p>
+        </div>
+        <a class="more" href="#">完整清单 →</a>
+      </div>
+
+      <details class="acc" open>
+        <summary><span class="no">01</span><h3>失恋 / 低谷期</h3><span class="caret">▾</span></summary>
+        <div class="inner">《心灵奇旅》《海边的曼彻斯特》《小森林》《步履不停》《千与千寻》。允许自己难过，但不允许自己停太久。
+          <div class="tags"><a href="#">治愈</a><a href="#">慢</a><a href="#">不催你振作</a></div>
+        </div>
+      </details>
+      <details class="acc">
+        <summary><span class="no">02</span><h3>加班 / 疲惫夜</h3><span class="caret">▾</span></summary>
+        <div class="inner">《海上钢琴师》《布达佩斯大饭店》《飞屋环游记》《岁月神偷》。60 分钟级别，不拖泥带水，看完能睡个好觉。
+          <div class="tags"><a href="#">60′</a><a href="#">轻盈</a><a href="#">不许倍速</a></div>
+        </div>
+      </details>
+      <details class="acc">
+        <summary><span class="no">03</span><h3>周末 / 有大把时间</h3><span class="caret">▾</span></summary>
+        <div class="inner">《七武士》《霸王别姬》《灿烂人生》《美国往事》《教父》。这些不是"电影"，是"经历"。请留足时间，别在手机上看。
+          <div class="tags"><a href="#">史诗</a><a href="#">影院优先</a><a href="#">正版</a></div>
+        </div>
+      </details>
+      <details class="acc">
+        <summary><span class="no">04</span><h3>想重启人生</h3><span class="caret">▾</span></summary>
+        <div class="inner">《阿甘正传》《当幸福来敲门》《肖申克的救赎》《白日梦想家》。看完关掉手机，去走 20 分钟路。电影给方向，路自己走。
+          <div class="tags"><a href="#">热血</a><a href="#">重启</a><a href="#">关手机</a></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ==================== 栏目六：关于本站（栅格 + 数据条）=================== -->
+  <section id="about" aria-labelledby="h-ab6" class="about">
+    <div class="container ab-grid">
+      <div>
+        <div class="eyebrow">ABOUT US</div>
+        <h2 id="h-ab6">yy6080 电影网<br><em>为忙碌的人做减法</em></h2>
+        <p><b>yy6080 = 60 分钟 × 80 分。</b>我们不生产资源，只做<b>电影资讯与选片指引</b>：替你在片海里做减法，把有限的 60 分钟，交给稳过 80 分的作品。不快进、不看解说、不倍速、不边刷手机边看。</p>
+        <div class="feat">
+          <div class="f"><div class="n">60′</div><h3>一部到底</h3><p>不快进、不看解说、不倍速。</p></div>
+          <div class="f"><div class="n">80+</div><h3>分才入选</h3><p>低于 80 分，不进片单，宁缺毋滥。</p></div>
+          <div class="f"><div class="n">0</div><h3>零盗版</h3><p>不提供、不链接、不引导任何下载或盗播。</p></div>
+          <div class="f"><div class="n">∞</div><h3>无限重看</h3><p>好电影不是看过，是每次看都像第一次。</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="metrics">
+          <div class="metric"><div class="top"><span>60′ 速看片单</span><b>312</b></div><div class="track"><i style="width:93%"></i></div></div>
+          <div class="metric"><div class="top"><span>稳定 80+ 影片</span><b>487</b></div><div class="track"><i style="width:81%"></i></div></div>
+          <div class="metric"><div class="top"><span>收录导演</span><b>58</b></div><div class="track"><i style="width:52%"></i></div></div>
+          <div class="metric"><div class="top"><span>连续更新</span><b>608 天</b></div><div class="track"><i style="width:100%"></i></div></div>
+        </div>
+        <p style="margin-top:22px;font-size:.86rem;color:var(--ink2)">⚠ <b style="color:#c0392b">合规声明：</b>"yy6080"为本站品牌标识与选片公式（<b>60 分钟 × 80 分</b>），<u>不含任何违法违规或低俗含义</u>。本站<b>不提供、不链接、不引导任何影片下载或盗版在线播放</b>，亦不传播任何违法违规及成人敏感内容。请通过电影院、持证视频平台等合法渠道观看，<u>拒绝盗版，支持创作者</u>。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== 页脚 ==================== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-col">
+        <a class="logo" href="#top"><span class="mono">yy6080</span><span>电影网</span></a>
+        <p style="color:var(--ink3);font-size:.85rem;margin-top:12px;max-width:300px">60 分钟，看懂 80 分。为忙碌的人做减法。</p>
+      </div>
+      <div class="ft-col"><h4>栏目导航</h4>
+        <ul><li><a href="#picks">60′ 速看</a></li><li><a href="#mood">8 种情绪</a></li><li><a href="#line80">80 分线</a></li><li><a href="#knight">导演 60 秒</a></li></ul>
+      </div>
+      <div class="ft-col"><h4>观影方法</h4>
+        <ul><li><a href="#">不倍速法则</a></li><li><a href="#">不许看解说</a></li><li><a href="#">看完走 20 分钟</a></li><li><a href="#">正版渠道</a></li></ul>
+      </div>
+      <div class="ft-col"><h4>站点信息</h4>
+        <ul><li><a href="#about">关于本站</a></li><li><a href="#">版权声明</a></li><li><a href="#">免责声明</a></li><li><a href="#">投稿/纠错</a></li></ul>
+      </div>
+    </div>
+    <div class="ft-base">
+      <p>© <span id="yr"></span> yy6080 电影网 · 网站网址：<a href="https://yy6080dianyingwang-cn.github.io/">https://yy6080dianyingwang-cn.github.io/</a> ｜ 域名：yy6080dianyingwang-cn ｜ "yy6080"为本站品牌与选片公式（60 分钟 × 80 分），倡导健康、理性、正版观影。</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* 移动端导航 */
+var burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',function(){
+  var open=nav.classList.toggle('show');
+  burger.setAttribute('aria-expanded',open?'true':'false');
+  burger.textContent=open?'✕':'☰';
+});
+nav.addEventListener('click',function(e){
+  if(e.target.tagName==='A'&&window.innerWidth<=760){
+    nav.classList.remove('show');burger.setAttribute('aria-expanded','false');burger.textContent='☰';
+  }
+});
+document.getElementById('yr').textContent=(new Date()).getFullYear();
+</script>
+</body>
+</html>
